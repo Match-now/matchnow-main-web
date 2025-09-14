@@ -33,12 +33,12 @@
 }
 
 /* ===========================
-   Tokens / Base
+   Tokens / Base (고정)
 =========================== */
 :root{
   --text:#E6EEF7;
   --muted:#A8B6C6;
-  --container:1920px;
+  --container:1310px;
   --header-h:100px;
 
   --btn-width:200px;
@@ -53,18 +53,21 @@
   --surface:#FFFFFF;
   --ink:#0E1116;
 
-  --fade-end:18%; /* 공통 하단 페이드 기본값 */
+  --fade-end:18%;
 }
 
 *{ box-sizing:border-box; }
 body{
   margin:0; color:var(--text);
   font-family:'esamanru','Pretendard',sans-serif;
-  line-height:1.5; overflow-x:hidden;
+  line-height:1.5;
+  overflow-x:auto;
+  min-width:1310px;
+  background:#000;
 }
 img{ display:block; max-width:100%; }
 a{ color:inherit; text-decoration:none; }
-.container{ max-width:var(--container); margin:0 auto; padding:0 40px; }
+.container{ width:var(--container); margin:0 auto; padding:0 40px; }
 
 /* Utility */
 .nowrap{ white-space:nowrap; }
@@ -95,17 +98,17 @@ a{ color:inherit; text-decoration:none; }
 .btn-pill:hover{ background:var(--btn-hover); border-color:var(--btn-hover); color:#fff; transform: translateY(-1px); }
 
 /* ===========================
-   Hero
+   Hero (고정)
 =========================== */
 .hero{
-  position:relative; min-height:100svh;
-  background: url('assets/main_bg.png') center/cover no-repeat;
+  position:relative; min-height:100vh;
+  background: url('assets/shared/main_bg.png') center/cover no-repeat;
   display:flex; align-items:center; overflow:visible;
 }
 .hero-overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.65) 100%); pointer-events:none; }
 .hero-inner{ position:relative; z-index:1; text-align:center; }
 .hero-title{
-  margin:0 0 32px 0; font-weight:700; font-size: clamp(36px, 4.2vw, 72px); line-height:1.16;
+  margin:0 0 32px 0; font-weight:700; font-size:56px; line-height:1.16;
   text-shadow: 0 6px 24px rgba(0,0,0,.6); opacity:0; transform: translateY(-30px);
   animation: fadeSlideIn 900ms cubic-bezier(.2,.7,.2,1) 100ms forwards;
 }
@@ -162,38 +165,31 @@ a{ color:inherit; text-decoration:none; }
 }
 
 /* ===========================
-   Feature Alert (속보)
+   Feature Alert (고정)
 =========================== */
 .feature-alert{
   position:relative; background: var(--surface); color: var(--ink);
-  padding: clamp(56px, 8vw, 112px) 0; isolation:isolate; min-height:1050px;
+  padding: 96px 0; isolation:isolate; min-height:1050px;
   --fade-end: 9%;
 }
 .feature-alert-inner{
   position:relative; z-index:1; display:grid; align-items:center;
-  grid-template-columns: 1fr 1fr; gap: 120px; max-width:100%; margin:0 auto; padding:0;
+  grid-template-columns: 1fr 1fr; gap: 120px; width:100%; margin:0 auto; padding:0;
 }
 .feature-alert .preview-stack{ position:relative; padding-left:240px; overflow:visible; }
-/* 속보 이미지 하단 페이드(마스크) */
 .feature-alert .preview-single{
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - var(--fade-end) - 2px), transparent 100%);
           mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - var(--fade-end) - 2px), transparent 100%);
-  -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
 }
-
 .feature-alert .feature-copy{ padding-left:0; }
-
-.feature-alert .accent-red{ color: var(--accent-red); animation: pulseRed 0.9s infinite alternate; will-change: color, text-shadow; }
+.feature-alert .accent-red{ color: var(--accent-red); animation: pulseRed 0.9s infinite alternate; }
 @keyframes pulseRed{
   0%{ color:#E10600; text-shadow:0 0 0 rgba(225,6,0,0); }
   100%{ color:#ff6b6b; text-shadow:0 0 10px rgba(255,107,107,.75); }
 }
 .feature-alert .feature-title{
   margin:0; font-family:'esamanru','Pretendard',sans-serif; font-weight:700;
-  font-size: clamp(28px, 4.2vw, 54px); line-height:1.25; color: var(--ink);
+  font-size:48px; line-height:1.25; color: var(--ink);
   position: relative; display:inline-block;
 }
 .feature-alert .feature-title::after{
@@ -209,19 +205,19 @@ a{ color:inherit; text-decoration:none; }
 .feature-alert .preview-single.in-view{ opacity:1; transform:none; }
 
 /* ===========================
-   Match Detail (경기 상세/채팅)
+   Match Detail (고정)
 =========================== */
 .match-detail{
   position: relative; background: var(--surface); color: var(--ink);
-  margin-top: -90px; padding-top: 0; padding-bottom: clamp(56px, 8vw, 112px);
+  margin-top: -90px; padding-top: 0; padding-bottom: 96px;
   isolation: isolate; z-index: 5; overflow: visible;
 }
-.match-detail .container{ max-width: 100%; margin: 0 auto; padding: 0; }
+.match-detail .container{ width: 100%; margin: 0 auto; padding: 0; }
 .match-detail-inner{ display:grid; align-items:center; grid-template-columns:1fr 1fr; gap:60px; }
 .match-copy{ padding-left:240px; }
 .match-copy .feature-title{
   margin:0; font-family:'esamanru','Pretendard',sans-serif;
-  font-weight:700; font-size: clamp(32px, 4.5vw, 60px); line-height:1.2;
+  font-weight:700; font-size:56px; line-height:1.2;
 }
 .accent-red{ color:var(--accent-red); }
 
@@ -230,7 +226,7 @@ a{ color:inherit; text-decoration:none; }
   pointer-events:none; overflow:visible;
 }
 .device-overlap{
-  width: min(1400px, 80vw);
+  width:1200px; 
   height:auto;
   transform: translateY(-80px);
   filter: drop-shadow(0 28px 36px rgba(10,29,71,.22));
@@ -238,55 +234,39 @@ a{ color:inherit; text-decoration:none; }
   opacity:0;
   transition: opacity 1s ease, transform 1s cubic-bezier(.25,.8,.25,1);
 
-  /* 디바이스 이미지 하단 페이드(마스크) */
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - var(--fade-end)), transparent 100%);
           mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - var(--fade-end)), transparent 100%);
-  -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
 }
 
-/* 진입 애니메이션 */
 .match-copy{ opacity:0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
 .match-detail .in-view.match-copy{ opacity:1; transform:none; }
 .match-detail .in-view.device-overlap{ opacity:1; transform: translateY(-40px); }
 
 /* ===========================
-   Community Board (다음 게시판) — app_preview4 효과 제거
+   Community Board (고정)
 =========================== */
-.board{ position:relative; background:var(--surface); color:var(--ink); padding: clamp(56px, 8vw, 120px) 0; }
-.board-inner{ display:grid; align-items:center; grid-template-columns: 1.1fr 0.9fr; gap: clamp(28px, 4vw, 80px); }
+.board{ position:relative; background:var(--surface); color:var(--ink); padding: 120px 0; }
+.board-inner{ display:grid; align-items:center; grid-template-columns: 1.1fr 0.9fr; gap: 60px; }
 
 .board-shot{ position:relative; }
-
-/* 효과 제거: 회전/스큐/마스크/오버레이/그림자/인뷰 모션 없음 */
-.board-frame{
-  position: relative;
-  width: min(760px, 48vw);
-  overflow: visible;
-  transform: none;
-  box-shadow: none;
-  opacity: 1;
-}
+.board-frame{ width: 720px; }
 .board-img{ display:block; width:100%; height:auto; }
 
-/* 카피 */
 .board-copy{ opacity:0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
 .board .board-copy.in-view{ opacity:1; transform:none; }
 .board-title{
   margin:0; font-family:'esamanru','Pretendard',sans-serif; font-weight:800;
-  font-size: clamp(34px, 5vw, 64px); line-height:1.12; letter-spacing:-0.01em;
+  font-size:56px; line-height:1.12; letter-spacing:-0.01em;
 }
 .board .kicker-text{ color:#777; font-weight:600; }
 .board .kicker-bar{ background:#2F6BFF; }
 
 /* ===========================
-   Closing (마지막 인사)
+   Closing (고정)
 =========================== */
-.closing{ background:var(--surface); color:var(--ink); padding: clamp(72px, 10vw, 160px) 0; }
+.closing{ background:var(--surface); color:var(--ink); padding: 160px 0; }
 .closing-inner{
-  max-width:min(900px, 88vw);
+  width:900px;
   margin:0 auto;
   text-align:center;
   opacity:0; transform: translateY(18px);
@@ -297,22 +277,20 @@ a{ color:inherit; text-decoration:none; }
 
 .closing-logo{
   display:block;
-  width: clamp(120px, 12vw, 180px);
+  width: 160px;
   margin: 0 auto 18px;
 }
-
-/* 마지막 섹션 문구 — esamanru Light(300) */
 .closing-text{
   margin:0;
   font-family:'esamanru','Pretendard',sans-serif;
   font-weight:300;
-  font-size: clamp(18px, 2.2vw, 28px);
+  font-size:22px;
   line-height:1.6;
   color:var(--ink);
 }
 
 /* ===========================
-   Footer
+   Footer (고정)
 =========================== */
 .site-footer{
   color:var(--muted);
@@ -320,17 +298,17 @@ a{ color:inherit; text-decoration:none; }
   padding:28px 0;
   font-family:'Pretendard',sans-serif;
   font-size:14px;
+  background:#fff;
 }
 .site-footer .legal{
   margin:6px 0 0;
   font-size:12px;
   color:#8c98a8;
-  letter-spacing:0;
   line-height:1.5;
 }
 
 /* ===========================
-   Flame Effects (불 이모지)
+   Flame Effects
 =========================== */
 .flame{
   position: relative;
@@ -368,47 +346,4 @@ a{ color:inherit; text-decoration:none; }
 }
 @media (prefers-reduced-motion: reduce){
   .flame, .flame::after{ animation:none !important; }
-}
-
-/* ===========================
-   Responsive
-=========================== */
-@media (max-width: 1440px){
-  .feature-intro .container{ max-width:1200px; padding:0 40px; }
-  .feature-alert .preview-stack{ padding-left:40px; }
-}
-@media (max-width: 992px){
-  .feature-intro-inner,
-  .feature-alert-inner,
-  .match-detail-inner,
-  .board-inner{ grid-template-columns:1fr; gap:28px; }
-
-  .feature-intro::after{
-    width:100%; height:58%; inset:auto 0 0 0;
-    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .preview-stack{ justify-content:center; padding-left:0; }
-  .preview-single{ width:80vw; }
-
-  .match-detail{ margin-top:-40px; }
-  .match-copy{ padding-left:40px; }
-  .device-wrap{ justify-content:center; }
-  .device-overlap{ width:95vw; transform: translateY(-40px); }
-  .match-detail .in-view.device-overlap{ transform: translateY(-20px); }
-
-  .board .board-copy{ text-align:center; }
-  .board-frame{ width: min(680px, 88vw); }
-
-  .closing{ padding: clamp(56px, 12vw, 120px) 0; }
-  .closing-text{ font-size: clamp(17px, 3.8vw, 22px); }
-
-  :root{ --fade-end:14%; } /* 모바일에서 공통 페이드 살짝 변경 (속보는 자체 9%) */
-  .site-footer{ padding:24px 0; }
-  .site-footer .legal{ font-size:11.5px; }
-}
-@media (max-width: 480px){
-  .preview-single{ width:92vw; }
-  .device-overlap{ width:95vw; }
-  .board-title{ font-size: clamp(28px, 9vw, 40px); }
 }

@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <!-- 기기 분기 스위치: 루트에 switch.js가 있을 때 -->
+  <script src="/switch.js"></script>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- 데스크탑 고정: 최소 폭 1310, 가로 스크롤 허용 -->
+  <meta name="viewport" content="width=1310, initial-scale=1"/>
   <title>MATCH NOW</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="종목별 LIVE, 커뮤니티, 관심경기까지 한 화면에서! 오직 필요한 정보만 빠르게 보여드립니다.">
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" href="assets/shared/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/shared/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/shared/favicon.png">
+
+  <!-- ===== Social Preview (OG / Twitter) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="매치나우 | matchnow.app">
+  <meta property="og:title" content="매치나우 – 실시간 중계·라이브 스코어">
+  <meta property="og:description" content="종목별 LIVE, 커뮤니티, 관심경기까지 한 화면에서! 오직 필요한 정보만 빠르게 보여드립니다.">
+  <meta property="og:url" content="https://matchnow.app/">
+  <meta property="og:image" content="https://matchnow.app/assets/shared/og_url.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ko_KR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="매치나우 – 실시간 중계·라이브 스코어">
+  <meta name="twitter:description" content="종목별 LIVE, 커뮤니티, 관심경기까지 한 화면에서!">
+  <meta name="twitter:image" content="https://matchnow.app/assets/shared/og_url.png">
+
+  <!-- Canonical / Theme -->
+  <link rel="canonical" href="https://matchnow.app/">
+  <meta name="theme-color" content="#2D5D76">
+
+  <link rel="stylesheet" href="style-desktop.css" />
 </head>
 <body>
 
@@ -12,7 +43,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="MATCH NOW 홈">
-        <img src="assets/logo2.svg" alt="MATCH NOW 로고">
+        <img src="assets/shared/logo2.svg" alt="MATCH NOW 로고">
       </a>
       <nav class="nav" aria-label="주요 메뉴">
         <a href="#contact" class="nav-link">문의하기</a>
@@ -33,10 +64,10 @@
         <p class="hero-sub">지금 바로 내 손안의 라이브 경기</p>
         <div class="store-badges" id="download">
           <a href="#" aria-label="App Store에서 다운로드">
-            <img src="assets/appstore.png" alt="App Store에서 다운로드" loading="lazy" decoding="async">
+            <img src="assets/shared/appstore.png" alt="App Store에서 다운로드" loading="lazy" decoding="async">
           </a>
           <a href="#" aria-label="Google Play에서 다운로드">
-            <img src="assets/googleplay.png" alt="Google Play에서 다운로드" loading="lazy" decoding="async">
+            <img src="assets/shared/googleplay.png" alt="Google Play에서 다운로드" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
@@ -60,7 +91,7 @@
           </p>
         </div>
         <div class="preview-stack">
-          <img class="preview-single" src="assets/app_preview1.png" alt="앱 화면 미리보기" loading="lazy" decoding="async"/>
+          <img class="preview-single" src="assets/desktop/app_preview1.png" alt="앱 화면 미리보기" loading="lazy" decoding="async"/>
         </div>
       </div>
     </section>
@@ -69,7 +100,7 @@
     <section class="feature-alert" aria-label="실시간 속보 안내">
       <div class="container feature-alert-inner">
         <div class="preview-stack">
-          <img class="preview-single" src="assets/app_preview2.png" alt="앱 속보 알림 미리보기" loading="lazy" decoding="async"/>
+          <img class="preview-single" src="assets/desktop/app_preview2.png" alt="앱 속보 알림 미리보기" loading="lazy" decoding="async"/>
         </div>
         <div class="feature-copy">
           <div class="kicker-block">
@@ -93,22 +124,22 @@
             <span class="kicker-text">경기장에 난입할순 없자나?</span>
           </div>
           <h2 class="feature-title">
-            <span class="nowrap">희노애락</span><br/>
+            <span class="nowrap">희 노 애 락</span><br/>
             <span class="nowrap">채팅창에 <span class="accent-red">불</span> 지르자 <span class="flame">🔥</span></span>
           </h2>
         </div>
         <div class="device-wrap">
-          <img class="device-overlap" src="assets/app_preview3.png" alt="경기 상세 화면 프리뷰" loading="lazy" decoding="async"/>
+          <img class="device-overlap" src="assets/desktop/app_preview3.png" alt="경기 상세 화면 프리뷰" loading="lazy" decoding="async"/>
         </div>
       </div>
     </section>
 
-    <!-- Community Board (다음 게시판) — app_preview4 효과 제거 -->
+    <!-- Community Board -->
     <section class="board" aria-label="다음 게시판 소개">
       <div class="container board-inner">
         <div class="board-shot">
           <div class="board-frame">
-            <img class="board-img" src="assets/app_preview4.png" alt="다음 게시판 프리뷰" loading="lazy" decoding="async" />
+            <img class="board-img" src="assets/desktop/app_preview4.png" alt="다음 게시판 프리뷰" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -120,16 +151,16 @@
           <h2 class="board-title">
             매치나우에서 뒷풀이!<br/>
             여기서는 웃기면 다<br/>
-            <span class="accent-red">용서 가능.</span>
+            <span class="accent-red">용 서 가 능.</span>
           </h2>
         </div>
       </div>
     </section>
 
-    <!-- Closing / 마지막 인사 -->
+    <!-- Closing -->
     <section class="closing" aria-label="마지막 인사">
       <div class="container closing-inner">
-        <img class="closing-logo" src="assets/logo2.svg" alt="MATCH NOW 로고">
+        <img class="closing-logo" src="assets/shared/logo2.svg" alt="MATCH NOW 로고">
         <p class="closing-text">
           저희는 그냥 스포츠가 좋아서 모인 사람들입니다. <br>
           큰 회사도 아니고, 자본도 부족하며 당장 화려한 마케팅도 없어요...ㅠㅠ <br>
@@ -154,6 +185,7 @@
   <script>
     document.getElementById('yy').textContent = new Date().getFullYear();
 
+    // 인뷰 애니메이션
     const observeTargets = document.querySelectorAll(
       '.feature-intro, .feature-alert, .match-detail, .board, .closing, ' + 
       '.feature-intro .feature-copy, .feature-intro .preview-single, ' +

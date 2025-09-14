@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 기기 분기 스위치: 루트에 switch.js가 있을 때 -->
+  <script src="/switch.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=390, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>MATCH NOW · Mobile</title>
+  <meta name="description" content="모바일에 최적화된 실시간 중계·라이브 스코어! 커뮤니티와 관심경기까지 한 화면에서 빠르게.">
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" href="assets/shared/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/shared/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/shared/favicon.png">
+
+  <!-- ===== Social Preview (OG / Twitter) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="매치나우 | matchnow.app">
+  <meta property="og:title" content="매치나우 – 모바일 실시간 중계·라이브 스코어">
+  <meta property="og:description" content="모바일에 최적화된 실시간 중계·라이브 스코어! 커뮤니티와 관심경기까지 한 화면에서 빠르게.">
+  <meta property="og:url" content="https://matchnow.app/m.html">
+  <meta property="og:image" content="https://matchnow.app/assets/shared/og_url.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ko_KR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="매치나우 – 모바일 실시간 중계·라이브 스코어">
+  <meta name="twitter:description" content="모바일에 최적화된 실시간 중계·라이브 스코어!">
+  <meta name="twitter:image" content="https://matchnow.app/assets/shared/og_url.png">
+
+  <!-- Canonical / Theme -->
+  <link rel="canonical" href="https://matchnow.app/m.html">
+  <meta name="theme-color" content="#2D5D76">
+
+  <link rel="stylesheet" href="style-mobile.css" />
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="m-header" aria-label="상단 바">
+    <div class="m-container m-header-inner">
+      <a href="/" class="m-logo" aria-label="MATCH NOW 홈">
+        <img src="assets/mobile/m_logo.svg" alt="MATCH NOW 로고">
+      </a>
+      <nav class="m-nav" aria-label="메뉴">
+        <a href="#contact" class="m-link">문의하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 히어로 -->
+    <section class="m-hero" role="banner" aria-label="앱 소개">
+      <div class="m-container">
+        <div class="m-hero-inner">
+          <h1 class="m-hero-title">
+            그 녀석을<br>
+            대체할 실시간 중계<br>
+            전세계 라이브 스코어
+          </h1>
+
+          <div class="m-store" id="download">
+            <a href="#" class="m-store-btn" aria-label="App Store에서 다운로드">
+              <img src="assets/shared/appstore.png" alt="App Store에서 다운로드">
+            </a>
+            <a href="#" class="m-store-btn" aria-label="Google Play에서 다운로드">
+              <img src="assets/shared/googleplay.png" alt="Google Play에서 다운로드">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프리뷰 섹션 -->
+    <section class="m-intro" aria-label="앱 미리보기">
+      <div class="m-container m-intro-head">
+        <div class="m-kicker-block">
+          <span class="m-kicker-bar"></span>
+          <p class="m-kicker-text">각종 스포츠 팬 필수 어플 등장</p>
+        </div>
+        <h2 class="m-h2">
+          한눈에 다 보이는<br>
+          전세계 <span class="accent">라이브스코어</span>
+        </h2>
+      </div>
+
+      <div class="m-intro-stage">
+        <span class="m-intro-band" aria-hidden="true"></span>
+        <div class="m-intro-shot">
+          <img src="assets/mobile/m_app_preview1.png" alt="앱 미리보기 원본">
+        </div>
+      </div>
+    </section>
+
+    <!-- 속보 섹션 -->
+    <section class="m-alert" aria-label="실시간 속보">
+      <div class="m-container m-alert-head">
+        <div class="m-kicker-block">
+          <span class="m-kicker-bar"></span>
+          <p class="m-kicker-text">여기는 서버 터질까요~ 안터질까요~</p>
+        </div>
+        <h2 class="m-h2">
+          매치나우에서 <span class="accent-blue">실시간 점수</span>와<br>
+          각종 <span class="accent-red">스포츠 속보</span>를 확인하세요
+        </h2>
+      </div>
+
+      <div class="m-container m-alert-shot">
+        <img src="assets/mobile/m_app_preview2.png" alt="실시간 속보 미리보기">
+      </div>
+    </section>
+
+    <!-- 채팅/상세 섹션 -->
+    <section class="m-chat" aria-label="경기 상세/채팅">
+      <div class="m-container m-chat-head">
+        <div class="m-kicker-block">
+          <span class="m-kicker-bar"></span>
+          <p class="m-kicker-text">경기장에 난입할순 없자나?</p>
+        </div>
+        <h2 class="m-h2">
+          희 노 애 락<br>
+          채팅창에 <span class="accent-red">불</span> 지르자 🔥
+        </h2>
+      </div>
+
+      <div class="m-chat-stage">
+        <span class="m-chat-band" aria-hidden="true"></span>
+        <div class="m-chat-shot">
+          <img src="assets/mobile/m_app_preview3.png" alt="경기 상세/채팅 미리보기">
+        </div>
+      </div>
+    </section>
+
+    <!-- 게시판 섹션 -->
+    <section class="m-board" aria-label="다음 게시판">
+      <div class="m-container m-board-head">
+        <div class="m-kicker-block">
+          <span class="m-kicker-bar"></span>
+          <p class="m-kicker-text">경기 보고나면 할말 많죠...??</p>
+        </div>
+        <h2 class="m-h2">
+          매치나우에서 뒷풀이<br>
+          여기서는 웃기면 다<br>
+          <span class="accent-red">용서 가능.</span>
+        </h2>
+      </div>
+
+      <div class="m-board-stage">
+        <span class="m-board-band" aria-hidden="true"></span>
+        <div class="m-board-shot">
+          <img src="assets/mobile/m_app_preview4.png" alt="게시판 미리보기">
+        </div>
+        <small class="m-board-note">*추후 업데이트 예정</small>
+      </div>
+    </section>
+
+    <!-- 마지막 인사 섹션 -->
+    <section class="m-final" aria-label="마지막 인사">
+      <div class="m-container m-final-inner">
+        <img class="m-final-logo" src="assets/shared/logo2.svg" alt="MATCH NOW">
+        <p class="m-final-text">
+          저희는 그냥 스포츠가 좋아서 모인 사람들입니다.<br>
+          큰 회사도 아니고, 자본도 부족하며 당장 화려한 마케팅도 없어요..ㅠㅠ 하지만 많이 써주실수록 더 좋은<br>
+          서비스로 자라날 수 있습니다! 같이 키워주세요!<br>
+          다양한 이벤트와 서비스로 보답하겠습니다.<br>
+          진심으로 감사합니다!
+        </p>
+        <p class="m-final-ps">PS. 광고는 진짜 서비스 유지 할 정도만 할게요....</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer id="contact" class="m-footer">
+    <div class="m-container">
+      <p>© <span id="yy"></span> MATCH NOW ·
+        <a href="mailto:matchnow.help@gmail.com">matchnow.help@gmail.com</a>
+      </p>
+      <p class="m-legal">매치나우ㅣ대표 모두 다 같이ㅣ사업자등록번호 863-14-02541</p>
+    </div>
+  </footer>
+
+  <!-- ▼ 플로팅 다운로드 버튼 -->
+  <a class="fab-download" href="#download" role="button" aria-label="앱 다운로드">앱 다운로드</a>
+
+  <script>
+    // 연도
+    document.getElementById('yy').textContent = new Date().getFullYear();
+
+    // 대각선 밴드 인뷰 스윕 애니메이션
+    (function(){
+      const bands = document.querySelectorAll('.m-intro-band, .m-chat-band, .m-board-band');
+      if (!('IntersectionObserver' in window) || bands.length === 0) {
+        bands.forEach(el => el.classList.add('in-view'));
+      } else {
+        const io = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { root: null, threshold: 0.12, rootMargin: '0px 0px -20% 0px' });
+        bands.forEach(el => io.observe(el));
+      }
+    })();
+
+    // 히어로 타이틀: 인뷰 등장 + 터치 피드백
+    (function(){
+      const title = document.querySelector('.m-hero-title');
+      if (!title) return;
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, obs)=>{
+          entries.forEach(entry=>{
+            if(entry.isIntersecting){
+              title.classList.add('in-view');
+              obs.unobserve(title);
+            }
+          });
+        }, {threshold: 0.4});
+        io.observe(title);
+      } else {
+        title.classList.add('in-view');
+      }
+
+      const pressOn  = ()=> title.classList.add('is-pressed');
+      const pressOff = ()=> title.classList.remove('is-pressed');
+
+      title.addEventListener('pointerdown', pressOn, {passive:true});
+      title.addEventListener('pointerup', pressOff, {passive:true});
+      title.addEventListener('pointerleave', pressOff, {passive:true});
+      title.addEventListener('pointercancel', pressOff, {passive:true});
+      title.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') pressOn(); });
+      title.addEventListener('keyup', pressOff);
+    })();
+
+    // 공통 터치 피드백
+    (function(){
+      const pressables = document.querySelectorAll('.m-link, .m-store-btn, .fab-download');
+      const add = e => { e.currentTarget.classList.add('is-pressed'); };
+      const remove = e => { e.currentTarget.classList.remove('is-pressed'); };
+
+      pressables.forEach(el => {
+        el.addEventListener('pointerdown', add, {passive:true});
+        el.addEventListener('pointerup', remove, {passive:true});
+        el.addEventListener('pointerleave', remove, {passive:true});
+        el.addEventListener('pointercancel', remove, {passive:true});
+        el.addEventListener('keydown', (e)=>{
+          if(e.key === 'Enter' || e.key === ' '){ el.classList.add('is-pressed'); }
+        });
+        el.addEventListener('keyup', ()=>{ el.classList.remove('is-pressed'); });
+      });
+    })();
+  </script>
+</body>
+</html>
